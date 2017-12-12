@@ -11,6 +11,7 @@ require('./services/passport');
 mongoose.connect(keys.mongoURI);
 
 const app = express();
+
 authRoutes(app);
 
 const PORT = process.env.PORT || 5000;
