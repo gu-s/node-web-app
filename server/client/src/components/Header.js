@@ -5,8 +5,8 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a href="#" class="left brand-logo">Emaily</a>
-          <ul id="nav-mobile" class="right">
+          <a href="#" className="left brand-logo">Emaily</a>
+          <ul id="nav-mobile" className="right">
             <li>
               <a href="#">Login with Google</a>
             </li>
