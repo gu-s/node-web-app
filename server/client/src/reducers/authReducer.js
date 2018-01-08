@@ -4,7 +4,7 @@ export default function(state={},action){
 
   switch(action.type){
     case FETCH_USER:
-      return state;//TODO new state
+      return action.payload || false;//TODO new state
     default:
       return state;
   }
