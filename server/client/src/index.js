@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import materializeCSS from 'materialize-css/dist/css/materialize.min.css';
 
 import React from 'react';
