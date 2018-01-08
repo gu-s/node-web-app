@@ -7,8 +7,15 @@ module.exports = (app)=>{
 
   app.get('/auth/google/callback',
   passport.authenticate('google'),(req,res)=>{
-  res.redirect('/surveys');
-    //res.send(req.user);
+    res.redirect('/surveys');
+    // res.send(
+    //   "<code>"+req.user+"</code>"+
+    //   "<script>"+
+    //   "if(!!window.close()){"+
+    //     "window.close();}"+
+    //   "</script>"
+    // );
+
   });
 
   app.get('/api/current_user',(req,res)=>{
@@ -18,16 +25,18 @@ module.exports = (app)=>{
 
   app.get('/api/logout',(req,res)=>{
     req.logout();//clear cookies
-    res.send(req.user);//empty
-
+    //res.send(req.user);//empty
+    res.redirect('/');
   });
 
   app.get('/',(req,res)=>{
-    res.send({
-      name:"web Services Node"
-    });
+    res.send(
+      "<h1>web Services Node API</h1>"+
+      "<script>"+
+        "window.close()"+
+      "</script>"
+    );
   });
-
 
 
 }
